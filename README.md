@@ -1,18 +1,21 @@
-# CosmicClassifier
+# Cosmic Classifier - IIT Roorkee Cognizance '25
 
-## Importing Libraries : The notebook begins with essential imports and initial dataset loading.
+# **Exploratory Data Analysis**  
+- **Loading the Dataset** :The CSV file (thermoracleTrain.csv) is loaded into a Pandas DataFrame named df.
+- The dataset contains 60000 rows and 11 columns with the Prediction column with values 0 to 9, being the target column.
+- **Dataset Statistic Summary** : Mean for all columns (except Prediction) is almost zero indicating the data is scaled. Two categorical columns are present - Magnetic Field Strength and Radiation Levels.
 
-## Exploratory Data Analysis
-- **Loading the Dataset** : df = pd.read_csv("thermoracleTrain.csv") – Reads a CSV file (thermoracleTrain.csv) into a Pandas DataFrame named df.
-- **Displaying Column Names** : This prints the names of all columns in the dataset.
-- **Dataset Summary** : Mean for all columns (except Prediction) is almost zero indicating the data is scaled. Also there is presence of two categorical columns- Magnetic Field Strength and Radiation Levels.
+## **Dealing with Missing values in Numerical Columns**
+- Rows where the Prediction column is Null are dropped from the dataset.
+- The rest of the missing values in numerical columns are filled with the respective medians.
+- The value counts of the predicted classes show that the data is fairly balanced.
 
-## Dealing with Missing values in Numerical Columns
-- **Drop columns where Prediction is Null.** : Re-checks for missing values after handling them. Ideally, the output should now be zero for all columns.
-- **Filling the missing values in rest of numerical columns with the median of the respective columns**
-- **Fairly Balanced** : The data is fairly balanced since no single class dominates significantly.
+## **Categorical Columns Labeling and Cleaning**
+- The categorical columns- Magnetic Field Strength and Radiation Levels have values Category_1 to Category_20 which are mapped to corresponding values of 1 to 20 (treating them as levels) to numerical columns.
+## **Univariate and Bivariate Feature Analysis**
+-
 
-## Categorical Columns Labeling and Cleaning
+
 # **Model Development and Training**  
 We developed a custom neural network architecture for the classification task. Details of the same are as follows.
 
