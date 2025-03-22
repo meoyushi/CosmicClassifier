@@ -12,9 +12,18 @@
 
 ## **Categorical Columns Labeling and Cleaning**
 - The categorical columns- Magnetic Field Strength and Radiation Levels have values Category_1 to Category_20 which are mapped to corresponding values of 1 to 20 (treating them as levels) to numerical columns.
+- K-Nearest Neighbours Imputation is used to fill the missing values of the categorical columns.
 ## **Univariate and Bivariate Feature Analysis**
--
+- Distributions of all features are plotted to check for skewness and understand its overall distributon.
+- Pairwise correlation of all the features in plotted in a correlation matrix as a part of bivariate analysis.
+- Surface Temperature and Mineral Abundance is seen to have strong positive correlation with the target column.
 
+# **Noise Detection and Removal**
+## **Oulier Analysis and Removal**
+- Rows with absolute z-scores <3 are retained and else dropped leaving 55778 rows.
+## **Noise Detection and Elimination using Ensemble Techniques**
+- In the ensemble-based noise detection method, a list of classifiers is chosen to use for predicting class labels on the dataset. These models are not pre-trained; rather, they are instantiatedand then used within a cross-validation framework to generate predictions for each instance.The ensemble method computes how often each instance is misclassified across all the classifiers. The more classifiers that disagree with the true label, the higher the noise score for that instance, suggesting that it might be mislabeled or noisy.
+- Top 20 percentile data based on noise scores are removed resulting in 50186 columns remaining.
 
 # **Model Development and Training**  
 We developed a custom neural network architecture for the classification task. Details of the same are as follows.
