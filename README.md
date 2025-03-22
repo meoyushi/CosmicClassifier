@@ -1,11 +1,9 @@
-# CosmicClassifier  - IIT Roorkee Cognizance '25
+# Cosmic Classifier - IIT Roorkee Cognizance '25
 
-## Importing Libraries : The notebook begins with essential imports and initial dataset loading.
-
-## Exploratory Data Analysis
-- **Loading the Dataset** : df = pd.read_csv("thermoracleTrain.csv") – Reads a CSV file (thermoracleTrain.csv) into a Pandas DataFrame named df.
-- **Displaying Column Names** : This prints the names of all columns in the dataset.
-- **Dataset Summary** : Mean for all columns (except Prediction) is almost zero indicating the data is scaled. Also there is presence of two categorical columns- Magnetic Field Strength and Radiation Levels.
+# **Exploratory Data Analysis**  
+- **Loading the Dataset** :The CSV file (thermoracleTrain.csv) is loaded into a Pandas DataFrame named df.
+- The dataset contains 60000 rows and 11 columns with the Prediction column with values 0 to 9, being the target column.
+- **Dataset Statistic Summary** : Mean for all columns (except Prediction) is almost zero indicating the data is scaled. Two categorical columns are present - Magnetic Field Strength and Radiation Levels.
 
 ## **Dealing with Missing values in Numerical Columns**
 - Rows where the Prediction column is Null are dropped from the dataset.
@@ -61,7 +59,7 @@ This deep learning model demonstrates **strong performance across all classes** 
 📌 **Overall Accuracy**: **96.50%** across all 10 planet classifications  
 📌 **Average Precision**: **96.36%** (macro)  
 📌 **Average Recall**: **96.33%**  
-📌 **Average F1-Score**: **96.34%**  
+📌 **Average F1-Score**: **96.34%**   
 
 ### **Class-Specific Performance**  
 - **Best Performing Class**: **Class 1** with **99.00% F1-score** (**99.60% recall, 98.42% precision**)  
