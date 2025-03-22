@@ -3,7 +3,7 @@
 ## Importing Libraries : The notebook begins with essential imports and initial dataset loading.
 
 ## Exploratory Data Analysis
-- **Loading the Dataset** : df = pd.read_csv("thermoracleTrain.csv") – Reads a CSV file (thermoracleTrain.csv) into a Pandas DataFrame named df.
+- **Loading the Dataset** : df = pd.read_csv("cosmicclassifierTraining.csv") – Reads a CSV file (cosmicclassifierTraining.csv) into a Pandas DataFrame named df.
 - **Displaying Column Names** : This prints the names of all columns in the dataset.
 - **Dataset Summary** : Mean for all columns (except Prediction) is almost zero indicating the data is scaled. Also there is presence of two categorical columns- Magnetic Field Strength and Radiation Levels.
 
@@ -44,10 +44,10 @@ This architecture combines modern deep learning techniques like **residual conne
 This deep learning model demonstrates **strong performance across all classes** with an overall accuracy of **95.85%**.  
 
 ### **Performance Metrics**  
-📌 **Overall Accuracy**: **95.85%** across all 10 planet classifications  
-📌 **Average Precision**: **95.73%**  
-📌 **Average Recall**: **95.71%**  
-📌 **Average F1-Score**: **95.71%**  
+📌 **Overall Accuracy**: **96.50%** across all 10 planet classifications  
+📌 **Average Precision**: **96.36%** (macro)  
+📌 **Average Recall**: **96.33%**  
+📌 **Average F1-Score**: **96.34%**  
 
 ### **Class-Specific Performance**  
 - **Best Performing Class**: **Class 1** with **99.00% F1-score** (**99.60% recall, 98.42% precision**)  
